@@ -1,0 +1,68 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Sentence {
+  id         Int       @id @default(autoincrement())
+  externalId String?   @unique
+  sentence   String
+  translation String?
+  tags       String?
+  audioUrl   String?
+  createdAt  DateTime  @default(now())
+  clozes     Cloze[]
+  reviewLogs ReviewLog[]
+}
+
+model Cloze {
+  id              Int      @id @default(autoincrement())
+  sentenceId      Int
+  targetWord      String
+  occurrenceIndex Int      @default(1)
+  clozeText       String
+  sentence        Sentence @relation(fields: [sentenceId], references: [id])
+  progress        UserClozeProgress[]
+  reviewLogs      ReviewLog[]
+}
+
+model User {
+  id        Int     @id @default(autoincrement())
+  name      String?
+  email     String? @unique
+  createdAt DateTime @default(now())
+  progress  UserClozeProgress[]
+  logs      ReviewLog[]
+}
+
+model UserClozeProgress {
+  id           Int      @id @default(autoincrement())
+  userId       Int?
+  clozeId      Int
+  attempts     Int      @default(0)
+  correctCount Int      @default(0)
+  wrongCount   Int      @default(0)
+  ease         Float    @default(2.5)
+  intervalDays Int      @default(0)
+  repetitions  Int      @default(0)
+  nextDue      DateTime?
+  lastReviewed DateTime?
+  cloze        Cloze    @relation(fields: [clozeId], references: [id])
+  user         User?    @relation(fields: [userId], references: [id])
+}
+
+model ReviewLog {
+  id        Int      @id @default(autoincrement())
+  userId    Int?
+  clozeId   Int
+  userAnswer String
+  isCorrect Boolean
+  score     Int?
+  createdAt DateTime @default(now())
+  cloze     Cloze    @relation(fields: [clozeId], references: [id])
+  user      User?    @relation(fields: [userId], references: [id])
+}

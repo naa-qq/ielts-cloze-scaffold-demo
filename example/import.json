@@ -1,0 +1,82 @@
+[
+  {
+    "externalId": "s001",
+    "sentence": "The research indicates a significant increase in renewable energy usage.",
+    "targetWord": "increase",
+    "occurrenceIndex": 1,
+    "translation": "增加",
+    "tags": ["ielts","energy"]
+  },
+  {
+    "externalId": "s002",
+    "sentence": "She displayed remarkable resilience after the difficult exams.",
+    "targetWord": "resilience",
+    "occurrenceIndex": 1,
+    "translation": "韧性；恢复力",
+    "tags": ["ielts","emotion"]
+  },
+  {
+    "externalId": "s003",
+    "sentence": "It is essential to maintain a balanced diet for long-term health.",
+    "targetWord": "maintain",
+    "occurrenceIndex": 1,
+    "translation": "保持",
+    "tags": ["ielts","health"]
+  },
+  {
+    "externalId": "s004",
+    "sentence": "The committee will evaluate the proposals next week.",
+    "targetWord": "evaluate",
+    "occurrenceIndex": 1,
+    "translation": "评估",
+    "tags": ["ielts","academic"]
+  },
+  {
+    "externalId": "s005",
+    "sentence": "Rapid urbanization has transformed the landscape of many cities.",
+    "targetWord": "urbanization",
+    "occurrenceIndex": 1,
+    "translation": "城市化",
+    "tags": ["ielts","society"]
+  },
+  {
+    "externalId": "s006",
+    "sentence": "He attempted to clarify the misunderstanding during the meeting.",
+    "targetWord": "clarify",
+    "occurrenceIndex": 1,
+    "translation": "澄清",
+    "tags": ["ielts","communication"]
+  },
+  {
+    "externalId": "s007",
+    "sentence": "Learning a second language can broaden cognitive abilities.",
+    "targetWord": "broaden",
+    "occurrenceIndex": 1,
+    "translation": "拓宽",
+    "tags": ["ielts","education"]
+  },
+  {
+    "externalId": "s008",
+    "sentence": "The economy showed signs of recovery after the recession.",
+    "targetWord": "recovery",
+    "occurrenceIndex": 1,
+    "translation": "复苏",
+    "tags": ["ielts","economy"]
+  },
+  {
+    "externalId": "s009",
+    "sentence": "Students should prioritize time management during exam season.",
+    "targetWord": "prioritize",
+    "occurrenceIndex": 1,
+    "translation": "优先考虑",
+    "tags": ["ielts","study"]
+  },
+  {
+    "externalId": "s010",
+    "sentence": "The documentary highlighted the diversity of local cultures.",
+    "targetWord": "diversity",
+    "occurrenceIndex": 1,
+    "translation": "多样性",
+    "tags": ["ielts","culture"]
+  }
+]

@@ -1,0 +1,4 @@
+# CSV 示例（仅供参考，系统当前导入页接收 JSON)
+id,sentence,targetWord,occurrenceIndex,translation,tags
+1001,"He managed to complete the task despite the setbacks.","complete",1,"完成","ielts,listening"
+1002,"It is essential to maintain a healthy lifestyle for long-term benefits.","maintain",1,"保持","ielts,health"
